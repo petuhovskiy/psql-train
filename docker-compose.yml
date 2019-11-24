@@ -1,0 +1,17 @@
+version: '3.3'
+services:
+  db:
+    image: postgres
+    volumes:
+      - db:/var/lib/postgres/data
+      - ./mnt:/mnt
+    environment:
+      POSTGRES_PASSWORD: pwd
+    
+  adminer:
+    image: adminer
+    ports:
+      - 127.0.0.1:8080:8080
+
+volumes:
+  db:
