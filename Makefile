@@ -8,3 +8,6 @@ rm:
 
 run:
 	docker-compose exec db psql -U postgres
+
+term:
+	docker-compose exec db /bin/bash
